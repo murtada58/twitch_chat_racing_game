@@ -66,7 +66,7 @@ spikes.src = "./assets/environment/floor_props/spikes_anim_f9.png"
 
 
 let client = new tmi.Client({
-	channels: ["whamtada"]
+	channels: ["niknakzz"]
 });
 
 client.connect();
