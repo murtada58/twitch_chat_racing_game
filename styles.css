@@ -32,6 +32,7 @@ body #score-board {
   width: 25rem;
   background-color: #333333;
   color: #FFFFFF;
+  height: 80vh;
 }
 
 body #score-board #scores {
@@ -46,6 +47,8 @@ body #score-board #scores {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
+  height: calc(80vh - 5.5rem);
+  overflow-y: scroll;
 }
 
 body #score-board #scores .score {

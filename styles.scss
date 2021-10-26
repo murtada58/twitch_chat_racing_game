@@ -26,11 +26,14 @@ body {
         width: 25rem;
         background-color: #333333;
         color: #FFFFFF;
+        height: 80vh;
         #scores {
             display: flex;
             flex-direction: column;
             text-align: center;
             align-items: flex-start;
+            height: calc(80vh - 5.5rem);
+            overflow-y: scroll;
             .score {
                 display: grid;
                 grid-template-columns: auto 10rem 1fr;
