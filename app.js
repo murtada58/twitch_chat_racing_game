@@ -72,7 +72,7 @@ let client = new tmi.Client({
 client.connect();
 
 client.on('message', (channel, tags, message, self) => {
-    console.log(message.split(" "));
+    //console.log(tags, self);
     message = message.split(" ");
     if (message[0] === "!race" && !(tags['display-name'] in players) && countDown > 0)
     {
@@ -348,6 +348,7 @@ function draw(timeStamp)
     }
     else if (!gameOver)
     {
+        colorRect(canvasContext, canvas.width / 2  - 150, 25, 300, 200, "rgba(0, 0, 0, 0.5)")
         canvasContext.font = "5rem Poppins";
         canvasContext.fillStyle = "#FFFFFF";
         canvasContext.textAlign = "center";
@@ -361,7 +362,7 @@ init();
 
 function restart()
 {
-    countDown = 10;
+    countDown = 30;
     players = {};
     sortedPlayers = [];
     place = 1;
