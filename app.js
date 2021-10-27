@@ -18,7 +18,7 @@ let countDown = 0;
 let bobbingHeight = 0.2;
 let bobbingSpeed = 5;
 let gameOver = true;
-let deceleration = 0
+let deceleration = 0;
 let cameraLeftX = 0;
 let cameraMode = "1";
 let panning = false;
@@ -272,10 +272,10 @@ function draw(timeStamp)
     {
         mapContext.font = "1rem Poppins";
         let textWidth = mapContext.measureText(name).width;
-        colorRect(mapContext, map.width * (player.x / raceLength), ((map.height / (raceHeight + 60))  * ((player.y - (canvas.height - raceHeight)) + 100)) - 15, textWidth + 20, 20, "#000000")
+        colorRect(mapContext, map.width * (player.x / raceLength) - textWidth, ((map.height / (raceHeight + 60))  * ((player.y - (canvas.height - raceHeight)) + 100)) - 15, textWidth + 20, 20, "#000000")
         mapContext.fillStyle = "#FFFFFF";
         mapContext.textAlign = "left";
-        mapContext.fillText(name, map.width * (player.x / raceLength) + 10, ((map.height / (raceHeight + 60))  * ((player.y - (canvas.height - raceHeight)) + 100)));
+        mapContext.fillText(name, map.width * (player.x / raceLength) + 10 - textWidth, ((map.height / (raceHeight + 60))  * ((player.y - (canvas.height - raceHeight)) + 100)));
 
         test = player.x
         if (player.speed > 0)
