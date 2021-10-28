@@ -31,7 +31,6 @@ idleSpriteSheet[0].src = "./assets/characters/knight/knight_idle.png";
 idleSpriteSheet[1].src = "./assets/characters/goblin/goblin_idle.png";
 idleSpriteSheet[2].src = "./assets/characters/slime/slime_idle.png";
 
-
 let runSpriteSheet = [new  Image(), new  Image(), new  Image()];
 runSpriteSheet[0].src = "./assets/characters/knight/knight_run.png";
 runSpriteSheet[1].src = "./assets/characters/goblin/goblin_run.png";
@@ -66,7 +65,7 @@ spikes.src = "./assets/environment/floor_props/spikes_anim_f9.png"
 
 
 let client = new tmi.Client({
-	channels: ["niknakzz"]
+	channels: ["whamtada"]
 });
 
 client.connect();
@@ -301,18 +300,18 @@ function draw(timeStamp)
     }
 
     sortedPlayers.sort(function(a, b) {
-        // check everything here...
+        // should be fixed but keep watch on it just in case
          if (a.place != 0 && b.place != 0)
-         { // might be the other way around
+         {
              return  b.place - a.place
          }
          else if (a.place != 0)
          {
-             return -1
+             return 1
          }
          else if (b.place != 0)
          {
-             return 1
+             return -1
          }
          else
          {
